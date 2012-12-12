@@ -2,10 +2,8 @@ Welcome to stati-python's documentation!
 ======================================
 
 
-
-
-.. image:: https://secure.travis-ci.org/Lispython/stati-python.png
-	   :target: https://secure.travis-ci.org/Lispython/stati-python
+.. image:: https://secure.travis-ci.org/GottWall/stati-python.png
+	   :target: https://secure.travis-ci.org/GottWall/stati-python
 
 Features
 --------
@@ -34,5 +32,5 @@ USAGE
 CONTRIBUTE
 ----------
 
-Fork https://github.com/Lispython/stati-python/ , create commit and pull request.
+Fork https://github.com/GottWall/stati-python/ , create commit and pull request.
 
