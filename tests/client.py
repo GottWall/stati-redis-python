@@ -9,7 +9,7 @@ Unittests for stati
 :copyright: (c) 2012 by GottWall team, see AUTHORS for more details.
 :license: BSD, see LICENSE for more details.
 """
-import simplejson as json
+import json
 from datetime import datetime
 import os
 from base import BaseTestCase

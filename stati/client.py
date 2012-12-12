@@ -11,7 +11,7 @@ Client for GottWall
 :github: http://github.com/Lispython/stati-python
 """
 
-import simplejson as json
+import json
 import datetime
 import redis
 

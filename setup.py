@@ -87,10 +87,6 @@ tests_require = [
 install_requires = [
     "redis"]
 
-if not (is_py3 or (is_py2 and py_ver[1] >= 7)):
-    install_requires.append("importlib==1.0.2")
-
-
 setup(
     name="stati",
     version=VERSION,
