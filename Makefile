@@ -16,6 +16,9 @@ shell:
 audit:
 	python setup.py autdit
 
+dist:
+	python setup.py sdist
+
 release:
 	python setup.py sdist upload
 	python setup.py bdist_wininst upload
