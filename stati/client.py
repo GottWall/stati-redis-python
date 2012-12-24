@@ -94,8 +94,8 @@ class RedisClient(Client):
 
         return self._redis
 
-    def incr(self, name, timestamp=datetime.datetime.now(), value=1,
-             filters={}):
+    def incr(self, name, timestamp=None, value=1, filters={}):
+        timestamp = timestamp or datetime.datetime.now()
         try:
             redis = self.redis
 
