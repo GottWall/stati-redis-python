@@ -13,7 +13,9 @@ Client for GottWall
 import logging
 import json
 import datetime
+import time
 import redis
+from random import randint
 
 
 logger = logging.getLogger('stati')
@@ -36,7 +38,8 @@ class Client(object):
             {"name": name,
              "timestamp": timestamp.strftime("%Y-%m-%dT%H:%M:%S"),
              "filters": filters,
-             "value": value})
+             "value": value,
+             "random": time.time()})
 
     def incr(self, name, timestamp=datetime.datetime.now(), value=1,
              filters={}):
@@ -104,4 +107,16 @@ class RedisClient(Client):
         except Exception, e:
             print(e)
             logger.warn(e)
+
+    def serialize(self, name, timestamp, value, filters={}):
+        """Make data bucket
+
+        :param data: dict of data
+        """
+        return json.dumps(
+            {"name": name,
+             "timestamp": timestamp.strftime("%Y-%m-%dT%H:%M:%S"),
+             "filters": filters,
+             "value": value,
+             "random": "{0}{1}".format(time.time(), str(randint(1, 1000)))})
 
