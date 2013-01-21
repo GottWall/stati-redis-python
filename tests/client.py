@@ -43,7 +43,8 @@ class ClientTestCase(BaseTestCase):
         decoded_data = json.loads(serialized_data)
         self.assertEquals(data.pop('timestamp').strftime("%Y-%m-%dT%H:%M:%S"),
                           decoded_data.pop('timestamp'))
-
+        self.assertTrue("random" in decoded_data.keys())
+        decoded_data.pop("random")
         self.assertEquals(decoded_data, data)
 
 
