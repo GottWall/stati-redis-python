@@ -20,6 +20,7 @@ dist:
 	python setup.py sdist
 
 release:
+	git tag -n ${VERSION} && git push --tags
 	python setup.py sdist upload
 	python setup.py bdist_wininst upload
 
