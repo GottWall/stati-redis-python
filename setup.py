@@ -4,7 +4,7 @@
 stati-redis-python
 ~~~~~~~~~~~~~~~~~~
 
-Python Redis Client for GottWall
+Python client with redis transport for GottWall statistics aggregator
 
 :copyright: (c) 2012 - 2013 by GottWall team, see AUTHORS for more details.
 :license: BSD, see LICENSE for more details.
@@ -47,7 +47,7 @@ install_requires = [
 setup(
     name="stati-redis",
     version=VERSION,
-    description="Python redis client for GottWall statistics server",
+    description="Python client with redis transport for GottWall statistics aggregator",
     long_description=readme_content,
     author="Alex Lispython",
     author_email="alex@obout.ru",
