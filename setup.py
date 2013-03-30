@@ -45,7 +45,7 @@ install_requires = [
     "redis"]
 
 setup(
-    name="stati_redis",
+    name="stati-redis",
     version=VERSION,
     description="Python redis client for GottWall statistics server",
     long_description=readme_content,
@@ -53,7 +53,7 @@ setup(
     author_email="alex@obout.ru",
     maintainer="Alexandr Lispython",
     maintainer_email="alex@obout.ru",
-    url="https://github.com/GottWall/stati-python",
+    url="https://github.com/GottWall/stati-redis-python",
     packages=["stati_redis"],
     install_requires=install_requires,
     tests_require=tests_require,
