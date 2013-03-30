@@ -9,13 +9,13 @@ stati-redis is a python client with redis transport for `GottWall metrics aggreg
 INSTALLATION
 ------------
 
-To use gottwall  use pip or easy_install:
+To use gottwall  use `pip` or `easy_install`:
 
-`pip install stati-redis`
+``pip install stati-redis``
 
 or
 
-`easy_install stati-redis`
+``easy_install stati-redis``
 
 
 USAGE
