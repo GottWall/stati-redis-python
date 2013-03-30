@@ -13,7 +13,7 @@ import json
 from datetime import datetime
 import os
 from base import BaseTestCase
-from stati import Client, RedisClient
+from stati_redis import Client, RedisClient
 from redis import Redis
 
 HOST = os.environ.get("STATI_REDIS_HOST", "10.8.9.8") # Redis in virtual machine

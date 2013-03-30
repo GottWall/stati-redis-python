@@ -1,19 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-stati.example
+stati_redis.example
 ~~~~~~~~~~~~~
 
 Stati example to use Redis pub/sub transport
 
 :copyright: (c) 2012 by GottWall team, see AUTHORS for more details.
 :license: BSD, see LICENSE for more details.
-:github: http://github.com/Lispython/stati-python
+:github: http://github.com/GottWall/stati-redis-python
 """
 
-from stati import RedisClient, Client
+from stati_redis import RedisClient
 
-private_key = "gottwall_pricatekey"
+private_key = "gottwall_privatekey"
 public_key = "project_public_key"
 project = "test_gottwall_project"
 

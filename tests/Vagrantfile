@@ -9,7 +9,7 @@ Vagrant::Config.run do |config|
     # machine_config.vm.forward_port 22, 2222
     #  config.vm.customize ["modifyvm", :id, "--memory", 1024]
 
-    machine_config.vm.network :hostonly, "10.8.9.8"
+    machine_config.vm.network :hostonly, "10.8.9.9"
     machine_config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
     machine_config.vm.host_name = "gottwall"
     machine_config.vm.provision :shell, :inline => "sudo apt-get install make"
