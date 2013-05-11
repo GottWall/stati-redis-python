@@ -102,21 +102,23 @@ class RedisClient(Client):
         try:
             redis = self.redis
 
-            redis.sadd(self.data_key, self.serialize(name, timestamp, value, filters))
-            redis.publish(self.channel, json.dumps({"type": "notification"}))
+            redis.sadd(self.data_key, self.serialize("incr", name, timestamp, value, filters))
+            redis.publish(self.channel, json.dumps({"a": "notification"}))
         except Exception, e:
             print(e)
             logger.warn(e)
 
-    def serialize(self, name, timestamp, value, filters={}):
+    def serialize(self, action, name, timestamp, value, filters={}):
         """Make data bucket
 
         :param data: dict of data
         """
         return json.dumps(
-            {"name": name,
-             "timestamp": timestamp.strftime("%Y-%m-%dT%H:%M:%S"),
-             "filters": filters,
-             "value": value,
-             "random": "{0}{1}".format(time.time(), str(randint(1, 1000)))})
+            {
+                "a": action,
+                "name": name,
+                "timestamp": timestamp.strftime("%Y-%m-%dT%H:%M:%S"),
+                "filters": filters,
+                "value": value,
+                "random": "{0}{1}".format(time.time(), str(randint(1, 1000)))})
 
